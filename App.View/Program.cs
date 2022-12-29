@@ -3,6 +3,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 var mvcBuildeer = builder.Services.AddRazorPages();
+builder.Services.AddTransient<HttpClient>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
